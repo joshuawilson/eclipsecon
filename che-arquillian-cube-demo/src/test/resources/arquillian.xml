@@ -6,7 +6,7 @@
 
 
     <extension qualifier="docker">
-        <property name="machineName">dev</property>
+        <property name="serverUri">tcp://127.0.0.1:2375</property>
         <property name="dockerContainers">
             wildfly:
               buildImage:
@@ -15,7 +15,8 @@
                 remove: true
               exposedPorts: [8080/tcp, 9990/tcp]
               await:
-                strategy: polling
+                strategy: sleeping
+                sleepTime: 200 s #1
               portBindings: [8081->8080/tcp, 9991->9990/tcp]
         </property>
     </extension>
