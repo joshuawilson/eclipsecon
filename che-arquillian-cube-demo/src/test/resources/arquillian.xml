@@ -6,6 +6,7 @@
 
 
     <extension qualifier="docker">
+        <property name="machineName">dev</property>
         <property name="dockerContainers">
             wildfly:
               buildImage:
@@ -21,7 +22,7 @@
 
     <container qualifier="wildfly" default="true">
         <configuration>
-            <property name="target">wildfly:8.1.0.Final:remote</property>
+            <property name="chameleonTarget">wildfly:8.2.0.Final:remote</property>
             <property name="username">admin</property>
             <property name="password">Admin#70365</property>
         </configuration>
