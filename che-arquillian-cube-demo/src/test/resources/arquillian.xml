@@ -16,10 +16,16 @@
               exposedPorts: [8080/tcp, 9990/tcp]
               await:
                 strategy: sleeping
-                sleepTime: 200 s #1
+                sleepTime: 20 s #1
               portBindings: [8081->8080/tcp, 9991->9990/tcp]
         </property>
     </extension>
+
+	<extension qualifier="openshift">
+	  <property name="originServer">https://10.1.2.2:8443</property>
+	  <property name="namespace">demo</property>
+	  <property name="definitionsFile">src/test/resources/wildfly_pod.json</property> <!--1-->
+	</extension>
 
     <container qualifier="wildfly" default="true">
         <configuration>
