@@ -27,8 +27,6 @@ import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 import org.junit.runner.RunWith;
 
-import com.github.dockerjava.api.DockerClient;
-
 @RunWith(Arquillian.class)
 public class HelloWorldServletTest {
 
@@ -91,16 +89,6 @@ public class HelloWorldServletTest {
         File logFolder = newFolder.listFiles()[0];
         assertThat(logFolder, notNullValue());
         assertThat(logFolder.listFiles().length > 0, is(true));
-    }
-
-    @Test
-    public void should_enrich_test_with_docker_client(@ArquillianResource CubeController cubeController) {
-        assertThat(cubeController, notNullValue());
-    }
-
-    @Test
-    public void should_enrich_test_with_docker_client(@ArquillianResource DockerClient dockerClient) {
-        assertThat(dockerClient, notNullValue());
     }
 
     @Test
