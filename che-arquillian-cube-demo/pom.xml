@@ -37,6 +37,21 @@
 
   <dependencyManagement>
     <dependencies>
+	    <dependency>
+	      <groupId>org.arquillian.cube</groupId>
+	      <artifactId>arquillian-cube-openshift</artifactId>
+	      <version>1.0.0.Alpha9</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>org.arquillian.cube</groupId>
+	      <artifactId>arquillian-cube-api</artifactId>
+	      <version>1.0.0.Alpha9</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>org.arquillian.cube</groupId>
+	      <artifactId>arquillian-cube-core</artifactId>
+	      <version>1.0.0.Alpha9</version>
+	    </dependency>
       <dependency>
         <groupId>org.arquillian</groupId>
         <artifactId>arquillian-universe</artifactId>
@@ -123,25 +138,23 @@
 			      <groupId>org.arquillian.cube</groupId>
 			      <artifactId>arquillian-cube-openshift</artifactId>
 			      <scope>test</scope>
-			      <version>1.0.0.Alpha9</version>
 			    </dependency>
 			    <dependency>
 			      <groupId>org.arquillian.cube</groupId>
 			      <artifactId>arquillian-cube-api</artifactId>
 			      <scope>test</scope>
-			      <version>1.0.0.Alpha9</version>
 			    </dependency>
 			    <dependency>
 			      <groupId>org.arquillian.cube</groupId>
 			      <artifactId>arquillian-cube-core</artifactId>
 			      <scope>test</scope>
-			      <version>1.0.0.Alpha9</version>
 			    </dependency>
 			    <dependency>
 					<groupId>org.arquillian.universe</groupId>
 					<artifactId>arquillian-cube-openshift</artifactId>
 					<type>pom</type>
 					<scope>test</scope>
+					<version>1.0.0.Alpha9</version>
 			    </dependency>
 		    </dependencies>
         </profile>
