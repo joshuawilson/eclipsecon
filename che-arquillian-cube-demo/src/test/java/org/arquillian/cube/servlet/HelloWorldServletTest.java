@@ -22,6 +22,7 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -67,7 +68,7 @@ public class HelloWorldServletTest {
         assertThat(log, notNullValue());
     }
 
-    @Test
+    @Test @Ignore("Only for Docker")
     public void should_execute_top(@ArquillianResource CubeController cubeController, @ArquillianResource CubeID cubeID) {
         TopContainer top = cubeController.top(cubeID);
         assertThat(top, notNullValue());
@@ -75,14 +76,14 @@ public class HelloWorldServletTest {
         assertThat(top.getTitles(), notNullValue());
     }
 
-    @Test
+    @Test @Ignore("Only for Docker")
     public void should_get_changes_on_container(@ArquillianResource CubeController cubeController, @ArquillianResource CubeID cubeID) {
         List<ChangeLog> changesOnFilesystem = cubeController.changesOnFilesystem(cubeID);
         assertThat(changesOnFilesystem, notNullValue());
         assertThat(changesOnFilesystem.size() > 0, is(true));
     }
 
-    @Test
+    @Test @Ignore("Only for Docker")
     public void should_copy_files_from_container(@ArquillianResource CubeController cubeController, @ArquillianResource CubeID cubeID) throws IOException {
         File newFolder = folder.newFolder();
         cubeController.copyFileDirectoryFromContainer(cubeID, "/opt/jboss/wildfly/standalone/log/", newFolder.getAbsolutePath());

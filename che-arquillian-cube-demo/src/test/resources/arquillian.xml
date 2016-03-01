@@ -24,7 +24,8 @@
 	<extension qualifier="openshift">
 	  <property name="originServer">https://10.1.2.2:8443</property>
 	  <property name="namespace">demo</property>
-	  <property name="definitionsFile">src/test/resources/wildfly_pod.json</property> <!--1-->
+      <property name="proxiedContainerPorts">wildfly:8080,wildfly:9990</property>
+	  <property name="definitionsFile">src/test/resources/wildfly_pod.json</property>
 	</extension>
 
     <container qualifier="wildfly" default="true">
