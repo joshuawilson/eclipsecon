@@ -10,7 +10,7 @@
 	"spec": {
 		"containers": [{
 			"name": "wildfly",
-			"image": "arquillian:./src/test/resources/wildfly",
+			"image": "jboss/wildfly",
             "ports": [
                 {
                     "hostPort": 8080,
