@@ -10,7 +10,7 @@
 	"spec": {
 		"containers": [{
 			"name": "wildfly",
-			"image": "jboss/wildfly",
+			"image": " docker.io/jboss/wildfly",
             "ports": [
                 {
                     "hostPort": 8080,
