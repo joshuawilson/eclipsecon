@@ -47,7 +47,9 @@
 
 1. Go to the project in the terminal to the level the pom.xml is at (should be the project root).  
 2. Login to OpenShift at the cli  
-    *  oc login [URL for OpenShift]  
+    *  oc login [URL:port for OpenShift]  
+    *  oc new-project demo (if you don't already have a demo project)  
+    *  oc use demo
 
 3. Run this command:  
     *  `mvn clean install -P openshift`
