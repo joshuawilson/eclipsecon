@@ -10,7 +10,7 @@
 	"spec": {
 		"containers": [{
 			"name": "wildfly",
-			"image": "docker.io/aslakknutsen/wildfly-demo",
+			"image": "docker.io/aslakknutsen/wildfly-demo:os",
 			"readinessProbe": {
 			     "httpGet": {
 			         "path": "/",
